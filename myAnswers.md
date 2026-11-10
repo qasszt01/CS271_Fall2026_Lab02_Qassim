@@ -127,6 +127,10 @@ Hex encoding (from disassembly log): `0x`
 
 Binary (32-bit):
 ```
+
+54ffffa1
+0101 0100 1111 1111 1111 1111 1010 0001
+
 _    _    _    _    _    _    _    _
 ____ ____ ____ ____ ____ ____ ____ ____
 ```
@@ -136,12 +140,14 @@ ____ ____ ____ ____ ____ ____ ____ ____
 | 01010100 | imm19 | 0 | cond |
 |          |       |   |      |
 
-- `imm19` (binary) =
-- `imm19` as a two's complement integer =
-- Byte offset (imm19 × 4) =
-- `B.NE` address (from disassembly) =
-- `sum_loop` address (from disassembly) =
-- Do they match?
+01010100   1111111111111111101  0   0001
+
+- `imm19` (binary) = 1111111111111111101
+- `imm19` as a two's complement integer = -3
+- Byte offset (imm19 × 4) = -12
+- `B.NE` address (from disassembly) = 0x1c
+- `sum_loop` address (from disassembly) = 0x10
+- Do they match? yes
 
 ---
 
